@@ -1,0 +1,37 @@
+# Default Configuration generated with Recipe Changer v0.4
+# true= close player inventory when denied crafting 
+# false= don't close player inventory when denied crafting.
+closeinventory: true
+# true= allow crafting 
+# false= disallow crafting
+Iron Horse: true
+Gold Horse: true
+Diamond Horse: true
+Name Tag: true
+Saddle: true
+Grass Block: true
+Moss Stone: true
+Moss Brick: true
+Cracked Brick: true
+Chiseled Brick: true
+Web: true
+Obsidian: true
+Grass: true
+Ice: true
+Fire: true
+Chain Helmet: true
+Chain ChestPiece: true
+Chain Leggings: true
+Chain Boots: true
+Exp Bottle: true
+Sponge: true
+Bedrock: false
+Redstone Ore: true
+Dragon Egg: false
+Gun Powder: true
+Mob Spawner: false
+Nether Star: false
+Command Block: false
+autoupdate-check: true
+messages: true
+check_bukkit_compatibility: false
