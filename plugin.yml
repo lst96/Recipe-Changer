@@ -1,5 +1,5 @@
 name: Recipe Changer
-version: 0.4
+version: 0.7
 author: lst96
 main: io.github.lst96.RecipeChanger.Recipe
 commands:
@@ -35,6 +35,8 @@ permissions:
             recipe.cobweb: true
             recipe.mobspawner: true
             recipe.command: true
+            recipe.podzol: true
+            recipe.doubletallgrass: true
     recipe.member:
         description: gives all permissions except reload.
         children:
@@ -64,6 +66,8 @@ permissions:
             recipe.cobweb: true
             recipe.mobspawner: true
             recipe.command: true
+            recipe.podzol: true
+            recipe.doubletallgrass: true
     recipe.reload:
         description: Allows use of recipereload command.
     recipe.ironhorse:
@@ -116,4 +120,8 @@ permissions:
         description: Allows ability to craft Mob Spawners.
     recipe.command:
         description: Allows ability to craft Command Blocks.
+    recipe.podzol:
+        description: Allows ability to craft Podzol.
+    recipe.doubletallgrass:
+        description: Allows ability to craft Double TallGrass.
   

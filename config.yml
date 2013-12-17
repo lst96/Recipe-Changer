@@ -1,4 +1,4 @@
-# Default Configuration generated with Recipe Changer v0.4
+# Default Configuration generated with Recipe Changer v0.7
 # true= close player inventory when denied crafting 
 # false= don't close player inventory when denied crafting.
 closeinventory: true
@@ -32,6 +32,8 @@ Gun Powder: true
 Mob Spawner: false
 Nether Star: false
 Command Block: false
+Podzol: false
+Double TallGrass: false
 autoupdate-check: true
 messages: true
 check_bukkit_compatibility: false

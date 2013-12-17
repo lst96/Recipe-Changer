@@ -8,9 +8,6 @@ import java.util.logging.Logger;
 import net.h31ix.updater.Updater;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -36,6 +33,7 @@ public class Recipe extends JavaPlugin
     saveConfig();
     Crafting cr = new Crafting(this);
     cr.SetupCrafting();
+    getCommand("recipereload").setExecutor(new Recipereload(this));
     getServer().getPluginManager().registerEvents(new Crafting(this), this);
     try {
 	      Metrics metrics = new Metrics(this);
@@ -48,7 +46,7 @@ public class Recipe extends JavaPlugin
 	if(autoUpdate) {
 		setupUpdater();
 	String mcVersion = Bukkit.getBukkitVersion();
-    this.compatible = mcVersion.startsWith("1.6.2");
+    this.compatible = mcVersion.startsWith("1.7.2");
     if ((this.getConfig().getBoolean("check_bukkit_compatibility")) && (!this.compatible)) {
       this.logger.info("[Recipe Changer] is not compatible with " + Bukkit.getVersion());
       getServer().getPluginManager().disablePlugin(this);
@@ -56,23 +54,6 @@ public class Recipe extends JavaPlugin
 	}
   }
 }
-
-  public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
-  {
-    if (commandLabel.equalsIgnoreCase("recipereload")) {
-      if ((sender.isOp()) || (sender.hasPermission("recipe.reload"))) {
-        Bukkit.getServer().resetRecipes();
-        reloadConfig();
-        Crafting cr = new Crafting(this);
-        cr.SetupCrafting();
-        sender.sendMessage(ChatColor.DARK_RED + "[Recipe Changer]" + " " + ChatColor.RED + "Configuration Reloaded!");
-        return true;
-      }
-      sender.sendMessage(ChatColor.DARK_RED + "[Recipe Changer]" + ChatColor.RED + " I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
-      return true;
-    }
-    return false;
-  }
   public void onDisable() {
     this.logger.info(this.PREFIX + " plugin disabled.");
     Bukkit.getServer().clearRecipes();

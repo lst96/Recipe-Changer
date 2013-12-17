@@ -7,7 +7,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class Listeners implements Listener {
 	
-	Recipe plugin;
+	private Recipe plugin;
 	
 	public Listeners(Recipe instance) {
 		plugin = instance;
@@ -19,8 +19,7 @@ public class Listeners implements Listener {
 	  if(event.getPlayer().isOp() && plugin.isUpdate)
 	  {
 		  event.getPlayer().sendMessage(ChatColor.DARK_RED + "[Recipe Changer]" + ChatColor.RESET + ChatColor.RED + " An update is available: " + plugin.updater.getLatestVersionString());
-		  event.getPlayer().sendMessage(ChatColor.DARK_RED + "[Recipe Changer]" + ChatColor.RESET + ChatColor.RED + " Download update at http://dev.bukkit.org/bukkit-plugins/recipe-changer/files/7-recipe-changer-v0-5/");
+		  event.getPlayer().sendMessage(ChatColor.DARK_RED + "[Recipe Changer]" + ChatColor.RESET + ChatColor.RED + " Download update at http://dev.bukkit.org/bukkit-plugins/recipe-changer/files/10-recipe-changer-v0-8/");
 	  }
 	}
-
 }
