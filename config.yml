@@ -1,4 +1,4 @@
-# Default Configuration generated with Recipe Changer v0.7
+# Default Configuration generated with Recipe Changer v0.6
 # true= close player inventory when denied crafting 
 # false= don't close player inventory when denied crafting.
 closeinventory: true
@@ -34,6 +34,5 @@ Nether Star: false
 Command Block: false
 Podzol: false
 Double TallGrass: false
-autoupdate-check: true
-messages: true
+autoupdate: true
 check_bukkit_compatibility: false

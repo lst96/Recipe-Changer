@@ -1,5 +1,5 @@
 name: Recipe Changer
-version: 0.7
+version: 0.6
 author: lst96
 main: io.github.lst96.RecipeChanger.Recipe
 commands:
