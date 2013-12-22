@@ -1,4 +1,7 @@
-package io.github.lst96.RecipeChanger;
+package io.github.lst96.RecipeChanger.Commands;
+
+import io.github.lst96.RecipeChanger.Recipe;
+import io.github.lst96.RecipeChanger.Listeners.Crafting;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

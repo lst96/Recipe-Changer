@@ -1,4 +1,6 @@
-package io.github.lst96.RecipeChanger;
+package io.github.lst96.RecipeChanger.Listeners;
+
+import io.github.lst96.RecipeChanger.Recipe;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -247,6 +249,12 @@ public class Crafting
 	  DTGrass.setIngredient('S', Material.SEEDS);
 	  DTGrass.setIngredient('D', Material.GRASS);
 	  Bukkit.getServer().addRecipe(DTGrass);
+  }
+  if (plugin.getConfig().getBoolean("PackedIce")){
+	  ShapedRecipe packedice = new ShapedRecipe(new ItemStack(Material.PACKED_ICE));
+	  packedice.shape(new String[] { "NNN", "NII", "NII"});
+	  packedice.setIngredient('I', Material.ICE);
+	  Bukkit.getServer().addRecipe(packedice);
   }
   }
 
@@ -500,7 +508,16 @@ public class Crafting
     		  player.sendMessage(ChatColor.RED + "You don't have permission to craft this item.");
     	  }
     	  break;
+      case 60:
+    	  if(!player.hasPermission("recipe.packedice")) {
+    		  e.setCancelled(true);
+    	      if(plugin.getConfig().getBoolean("closeinventory")) {
+    	    	  player.closeInventory();
+    	      }
+    	      player.sendMessage(ChatColor.RED + "You don't have permission to craft this item.");
+    		  }
+              break;
     		  }
     	  }
-    	}
+     }
 }

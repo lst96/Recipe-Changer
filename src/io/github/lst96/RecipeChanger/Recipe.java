@@ -1,5 +1,7 @@
 package io.github.lst96.RecipeChanger;
 
+import io.github.lst96.RecipeChanger.Commands.Recipereload;
+import io.github.lst96.RecipeChanger.Listeners.Crafting;
 import io.github.lst96.RecipeChanger.metrics.Metrics;
 
 import java.io.IOException;
@@ -51,7 +53,7 @@ public class Recipe extends JavaPlugin
   }
 }
   public void onDisable() {
-    this.logger.info(this.PREFIX + " plugin disabled.");
+    this.logger.info(this.PREFIX + " Recipe Changer Disabled.");
     Bukkit.getServer().clearRecipes();
   }
   private void setupUpdater() {
