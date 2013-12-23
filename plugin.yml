@@ -1,5 +1,5 @@
 name: Recipe Changer
-version: 0.6
+version: 0.7
 author: lst96
 main: io.github.lst96.RecipeChanger.Recipe
 commands:
@@ -37,6 +37,7 @@ permissions:
             recipe.command: true
             recipe.podzol: true
             recipe.doubletallgrass: true
+            recipe.packedice: true
     recipe.member:
         description: gives all permissions except reload.
         children:
@@ -68,4 +69,5 @@ permissions:
             recipe.command: true
             recipe.podzol: true
             recipe.doubletallgrass: true
+            recipe.packedice: true
   
