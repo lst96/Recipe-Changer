@@ -2,6 +2,7 @@ package io.github.lst96.RecipeChanger;
 
 import io.github.lst96.RecipeChanger.Commands.Recipereload;
 import io.github.lst96.RecipeChanger.Listeners.Crafting;
+import io.github.lst96.RecipeChanger.Listeners.Permissions;
 import io.github.lst96.RecipeChanger.metrics.Metrics;
 
 import java.io.IOException;
@@ -34,6 +35,7 @@ public class Recipe extends JavaPlugin
     cr.SetupCrafting();
     getCommand("recipereload").setExecutor(new Recipereload(this));
     getServer().getPluginManager().registerEvents(new Crafting(this), this);
+    getServer().getPluginManager().registerEvents(new Permissions(this), this);
     try {
 	      Metrics metrics = new Metrics(this);
 	      metrics.start();

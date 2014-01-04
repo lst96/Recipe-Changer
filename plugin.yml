@@ -1,5 +1,5 @@
 name: Recipe Changer
-version: 0.7
+version: 0.8
 author: lst96
 main: io.github.lst96.RecipeChanger.Recipe
 commands:
@@ -38,7 +38,61 @@ permissions:
             recipe.podzol: true
             recipe.doubletallgrass: true
             recipe.packedice: true
+            recipe.cowegg: true
+            recipe.chickenegg: true
+            recipe.sheepegg: true
+            recipe.horseegg: true
+            recipe.bategg: true
+            recipe.mooshroomegg: true
+            recipe.ocelotegg: true
+            recipe.squidegg: true
+            recipe.wolfegg: true
+            recipe.pigegg: true
+            recipe.obsidian: true
     recipe.member:
+        description: gives all permissions except reload.
+        children:
+            recipe.reload: false
+            recipe.ironhorse: true
+            recipe.goldhorse: true
+            recipe.diamondhorse: true
+            recipe.nametag: true
+            recipe.gunpowder: true
+            recipe.dragonegg: false
+            recipe.redstoneore: true
+            recipe.saddle: true
+            recipe.bedrock: false
+            recipe.sponge: true
+            recipe.enchanting: true
+            recipe.chainleggings: true
+            recipe.chainboots: true
+            recipe.chainhelmet: true
+            recipe.chainchest: true 
+            recipe.fire: false
+            recipe.chiseled: true
+            recipe.tallgrass: true 
+            recipe.grassblock: true
+            recipe.ice: true
+            recipe.mossbrick: true
+            recipe.mossstone: true
+            recipe.cobweb: true
+            recipe.mobspawner: false
+            recipe.command: false
+            recipe.podzol: true
+            recipe.doubletallgrass: true
+            recipe.packedice: true
+            recipe.cowegg: true
+            recipe.chickenegg: true
+            recipe.sheepegg: true
+            recipe.horseegg: true
+            recipe.bategg: true
+            recipe.mooshroomegg: true
+            recipe.ocelotegg: true
+            recipe.squidegg: true
+            recipe.wolfegg: true
+            recipe.pigegg: true
+            recipe.obsidian: true
+    recipe.admin:
         description: gives all permissions except reload.
         children:
             recipe.reload: false
@@ -70,4 +124,14 @@ permissions:
             recipe.podzol: true
             recipe.doubletallgrass: true
             recipe.packedice: true
-  
+            recipe.cowegg: true
+            recipe.chickenegg: true
+            recipe.sheepegg: true
+            recipe.horseegg: true
+            recipe.bategg: true
+            recipe.mooshroomegg: true
+            recipe.ocelotegg: true
+            recipe.squidegg: true
+            recipe.wolfegg: true
+            recipe.pigegg: true
+            recipe.obsidian: true
